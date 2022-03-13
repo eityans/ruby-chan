@@ -1,0 +1,54 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Rubocop
+
+# プッシュ時に実行
+on: [push]
+
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        ruby: [ '2.7.x' ]
+
+    steps:
+      - uses: actions/checkout@v2.3.4
+
+      - name: Set up Ruby version
+        uses: ruby/setup-ruby@v1.68.0
+        with:
+          ruby-version: 2.7.2
+          #bundler-cache: true
+
+      - name: apt-get
+        run: |
+          sudo apt-get update
+
+      - name: Set up bundler
+        run: gem install bundler
+
+      - name: Cache gems
+        uses: actions/cache@preview
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gem-
+
+      - name: bundle install
+        run: bundle install --path vendor/bundle
+        #run: bundle install
+
+      - name: Rubocop checks
+        run: bundle exec rubocop
+
+      # - name: Upload coverage results
+      #   uses: actions/upload-artifact@master
+      #   if: always()
+      #   with:
+      #     name: coverage-report
+      #     path: coverage

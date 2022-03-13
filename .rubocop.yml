@@ -1,0 +1,44 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  # The following cops were added to RuboCop, but are not configured. Please set Enabled to either `true` or `false` in your `.rubocop.yml` file.
+  # Please also note that can also opt-in to new cops by default by adding this to your config:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'  # 自動生成系ファイルは除外する
+    - 'vendor/**/*'   # https://github.com/socketry/nio4r/issues/232
+
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+# ドキュメンテーションを省略できるようにする
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+# GitHub Actions用にシェルファイルの実行権限に関するcopを無視する
+Lint/ScriptPermission:
+  Exclude:
+    - 'bin/*'
+
+# RuboCopのFrozenStringLiteralCommentの警告を止める
+# (https://www.task-notes.com/entry/20160831/1472572735)
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/EndOfLine:
+  Enabled: false
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Style/StringLiterals:
+  Enabled: false
+
+# RSpecではブロックの行数が多い警告を無視する
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
