@@ -2,7 +2,6 @@ require 'simplecov'
 SimpleCov.start 'rails'
 # frozen_string_literal: true
 
-require 'simplecov'
 require 'simplecov-lcov'
 SimpleCov::Formatter::LcovFormatter.config do |c|
   c.report_with_single_file = true
