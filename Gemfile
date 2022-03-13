@@ -45,6 +45,7 @@ end
 group :test do
   gem 'database_cleaner-active_record'
   gem 'simplecov', require: false
+  gem 'simplecov-lcov', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
