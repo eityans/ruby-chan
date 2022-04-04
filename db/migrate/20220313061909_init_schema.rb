@@ -1,4 +1,4 @@
-class InitSchema < ActiveRecord::Migration
+class InitSchema < ActiveRecord::Migration[6.1]
   def up # rubocop:disable Metrics/MethodLength
     # These are extensions that must be enabled in order to support this database
     enable_extension "plpgsql"

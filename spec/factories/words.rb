@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: words
@@ -18,10 +16,10 @@
 #  index_words_on_surface                      (surface)
 #  index_words_on_surface_and_reading_and_pos  (surface,reading,pos) UNIQUE
 #
-require 'test_helper'
-
-class WordTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+FactoryBot.define do
+  factory :word do
+    pos { "名詞" }
+    reading { "わたし" }
+    surface { "私" }
+  end
 end
