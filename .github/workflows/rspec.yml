@@ -30,7 +30,7 @@ jobs:
     #   with:
     #     ruby-version: 2.7.1
     - name: Set up Ruby version
-      uses: ruby/setup-ruby@v1.100.0
+      uses: ruby/setup-ruby@v1.100.1
       with:
         ruby-version: 2.7.2
         #bundler-cache: true
