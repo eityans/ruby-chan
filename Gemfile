@@ -55,7 +55,6 @@ gem 'line-bot-api'
 gem 'pry-byebug'
 
 gem 'factory_bot'
-gem 'newrelic_rpm'
 
 # Windowsで利用できないgemをインストールするため、platformsを追加している。
 # cf. https://bundler.io/man/gemfile.5.html
