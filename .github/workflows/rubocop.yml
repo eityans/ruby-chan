@@ -5,15 +5,13 @@ name: Rubocop
 # プッシュ時に実行
 on: [push]
 
-
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        ruby: [ '2.7.x' ]
+        ruby: ["2.7.x"]
 
     steps:
       - uses: actions/checkout@v3.0.1
@@ -21,7 +19,7 @@ jobs:
       - name: Set up Ruby version
         uses: ruby/setup-ruby@v1.101.0
         with:
-          ruby-version: 2.7.2
+          ruby-version: 2.7.5
           #bundler-cache: true
 
       - name: apt-get
