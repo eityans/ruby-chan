@@ -32,7 +32,7 @@ jobs:
       - name: Set up Ruby version
         uses: ruby/setup-ruby@v1.105.0
         with:
-          ruby-version: 3.0.0
+          ruby-version: 3.1.2
           #bundler-cache: true
       - name: Cache gems
         uses: actions/cache@v3
