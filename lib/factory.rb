@@ -45,7 +45,7 @@ class Factory
     # URLおよびクエリパラメタ設定
     url = URI.parse('https://jlp.yahooapis.jp/MAService/V1/parse')
     url.query = [
-      "appid=#{URI.encode_www_form_component(ENV['YAHOO_CLIENT_ID'])}",
+      "appid=#{URI.encode_www_form_component(ENV.fetch('YAHOO_CLIENT_ID', nil))}",
       'results=ma',
       "sentence=#{URI.encode_www_form_component(text)}"
     ].join('&')
