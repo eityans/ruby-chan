@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        ruby: ["2.7.x"]
+        ruby: ["3.x"]
 
     steps:
       - uses: actions/checkout@v3.0.2
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Ruby version
         uses: ruby/setup-ruby@v1.105.0
         with:
-          ruby-version: 2.7.5
+          ruby-version: 3.0.0
           #bundler-cache: true
 
       - name: apt-get
