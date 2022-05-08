@@ -24,7 +24,7 @@ class User < ApplicationRecord
       case response
       when Net::HTTPSuccess
         contact = JSON.parse(response.body)
-        user = User.find_or_initialize_by(user_id: user_id)
+        user = User.find_or_initialize_by(user_id:)
         user.update!(name: contact['displayName'], picture_url: contact['pictureUrl'])
         user
       else

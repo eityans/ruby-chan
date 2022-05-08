@@ -25,7 +25,7 @@ RSpec.describe MarkovDic, type: :model do
         :markov_dic,
         prefix_1: "私",
         prefix_2: "は",
-        suffix: suffix
+        suffix:
       )
     end
     before do
