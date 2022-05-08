@@ -59,3 +59,6 @@ gem 'factory_bot'
 # Windowsで利用できないgemをインストールするため、platformsを追加している。
 # cf. https://bundler.io/man/gemfile.5.html
 gem 'magic_cloud', '~> 0.0.4', platforms: :ruby
+
+# https://qiita.com/asami___t/items/d0eb10efe95651a4a8d7
+gem 'rexml', '~> 3.2', '>= 3.2.4'
