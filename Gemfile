@@ -60,5 +60,5 @@ gem 'factory_bot'
 # cf. https://bundler.io/man/gemfile.5.html
 gem 'magic_cloud', '~> 0.0.4', platforms: :ruby
 
-# https://qiita.com/asami___t/items/d0eb10efe95651a4a8d7
-gem 'rexml', '~> 3.2', '>= 3.2.4'
+# https://stackoverflow.com/questions/65479863/rails-6-1-ruby-3-0-0-tests-error-as-they-cannot-load-rexml
+gem 'rexml'
