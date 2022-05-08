@@ -79,7 +79,7 @@ class Factory
     req = Net::HTTP::Get.new(url.request_uri)
 
     # getリクエスト送信
-    Net::HTTP.start(url.host, url.port, use_ssl: use_ssl) do |http|
+    Net::HTTP.start(url.host, url.port, use_ssl:) do |http|
       http.request(req)
     end
   end

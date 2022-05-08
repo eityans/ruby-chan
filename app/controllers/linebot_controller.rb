@@ -17,7 +17,7 @@ class LinebotController < ApplicationController
       next unless event.type == Line::Bot::Event::MessageType::Text
 
       handler = MessageText.find_handler(event)
-      handler&.new(event: event)&.run
+      handler&.new(event:)&.run
     end
     head :ok
   end
