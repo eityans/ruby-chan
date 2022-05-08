@@ -255,9 +255,6 @@ DEPENDENCIES
   line-bot-api
   listen (~> 3.7)
   magic_cloud (~> 0.0.4)
-  net-imap
-  net-pop
-  net-smtp
   pg (>= 0.18, < 2.0)
   pre-commit
   pry-byebug
