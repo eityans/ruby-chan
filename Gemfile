@@ -46,6 +46,12 @@ group :test do
   gem 'database_cleaner-active_record'
   gem 'simplecov', require: false
   gem 'simplecov-lcov', require: false
+
+  #  https://stackoverflow.com/questions/71851775/rails-6-1-5-uninitialized-constant-mailtestmailer
+  # メールは利用していないが必要そうだ。できればこれは消したい。
+  gem 'net-imap' # for rspec
+  gem 'net-pop'  # for rspec
+  gem 'net-smtp' # to send email
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
