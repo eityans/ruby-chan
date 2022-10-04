@@ -14,7 +14,7 @@ jobs:
         ruby: ["3.x"]
 
     steps:
-      - uses: actions/checkout@v3.0.2
+      - uses: actions/checkout@v3.1.0
 
       - name: Set up Ruby version
         uses: ruby/setup-ruby@v1.117.0
