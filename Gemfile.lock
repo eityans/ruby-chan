@@ -231,7 +231,7 @@ GEM
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
       spring (>= 4)
-    squasher (0.6.2)
+    squasher (0.7.1)
     strscan (3.0.4)
     thor (1.2.1)
     timeout (0.3.0)
